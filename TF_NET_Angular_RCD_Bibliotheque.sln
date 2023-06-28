@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF_NET_Angular_RCD_Bibliotheque.API", "TF_NET_Angular_RCD_Bibliotheque.API\TF_NET_Angular_RCD_Bibliotheque.API.csproj", "{AC725866-102F-4B4C-94A5-4E3F1B1F333D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF_NET_Angular_RCD_Bibliotheque.Models", "TF_NET_Angular_RCD_Bibliotheque.Models\TF_NET_Angular_RCD_Bibliotheque.Models.csproj", "{01B1D7F4-B08A-499F-A1FF-63829C5BAC7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF_NET_Angular_RCD_Bibliotheque.DAL", "TF_NET_Angular_RCD_Bibliotheque.DAL\TF_NET_Angular_RCD_Bibliotheque.DAL.csproj", "{893ADB97-9818-4E58-92D2-B29B96568829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF_NET_Angular_RCD_Bibliotheque.BLL", "TF_NET_Angular_RCD_Bibliotheque.BLL\TF_NET_Angular_RCD_Bibliotheque.BLL.csproj", "{AE57E703-D8B7-4CCF-88F8-BA000DD93BCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC725866-102F-4B4C-94A5-4E3F1B1F333D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC725866-102F-4B4C-94A5-4E3F1B1F333D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC725866-102F-4B4C-94A5-4E3F1B1F333D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC725866-102F-4B4C-94A5-4E3F1B1F333D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B1D7F4-B08A-499F-A1FF-63829C5BAC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B1D7F4-B08A-499F-A1FF-63829C5BAC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B1D7F4-B08A-499F-A1FF-63829C5BAC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B1D7F4-B08A-499F-A1FF-63829C5BAC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893ADB97-9818-4E58-92D2-B29B96568829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893ADB97-9818-4E58-92D2-B29B96568829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893ADB97-9818-4E58-92D2-B29B96568829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893ADB97-9818-4E58-92D2-B29B96568829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE57E703-D8B7-4CCF-88F8-BA000DD93BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE57E703-D8B7-4CCF-88F8-BA000DD93BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE57E703-D8B7-4CCF-88F8-BA000DD93BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE57E703-D8B7-4CCF-88F8-BA000DD93BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99CF315B-51FE-41C9-A5E4-EA4731556F7B}
+	EndGlobalSection
+EndGlobal
