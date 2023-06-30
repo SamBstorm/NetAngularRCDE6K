@@ -27,13 +27,12 @@ namespace TF_NET_Angular_RCD_Bibliotheque.API.Controllers
             if(!ModelState.IsValid)
                 return BadRequest();
 
-            IEnumerable<Customer> customers = _customerService.GetMany();
+            login = _customerService.Login(login);
 
-            if(customers.Any(c => c.Pseudo == login.Pseudo && c.Password == c.Password))
+            if(login != null)
             {
-                Customer currentCustomer = customers.First(c => c.Pseudo == login.Pseudo);
-
-                string Token = _token.GenerateToken(currentCustomer);
+                
+                string Token = _token.GenerateToken(login);
                 return Ok(Token);
             }
             else

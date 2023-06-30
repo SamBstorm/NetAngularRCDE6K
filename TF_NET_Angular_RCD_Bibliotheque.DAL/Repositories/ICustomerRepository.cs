@@ -9,5 +9,6 @@ namespace TF_NET_Angular_RCD_Bibliotheque.DAL.Repositories
 {
     public interface ICustomerRepository : IBaseRepository<Customer>
     {
+        Customer? Login(string pseudo, byte[] password);
     }
 }

@@ -29,7 +29,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.DAL.Repositories
             return _entities.SingleOrDefault(predicate);
         }
 
-        public List<TEntity> GetMany()
+        public IEnumerable<TEntity> GetMany()
         {
             return _entities.ToList();
         }

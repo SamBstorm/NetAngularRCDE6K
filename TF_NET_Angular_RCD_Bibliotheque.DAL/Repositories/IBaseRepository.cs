@@ -10,7 +10,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.DAL.Repositories
     {
         public TEntity Add(TEntity e);
         public TEntity? GetOne(Func<TEntity, bool> predicate);
-        public List<TEntity> GetMany();
+        public IEnumerable<TEntity> GetMany();
         public IEnumerable<TEntity> GetMany(Func<TEntity, bool> predicate);
         public bool Update(TEntity entity);
         public bool Delete(TEntity entity);

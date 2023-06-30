@@ -10,11 +10,11 @@ namespace TF_NET_Angular_RCD_Bibliotheque.BLL.Services
 {
     public interface ICustomerService
     {
-        public Customer Add(CustomerFormDTO customer);
-        public Customer GetOne(int id);
-        public List<Customer> GetMany();
+        public CustomerFormDTO Add(CustomerFormDTO customer);
+        public CustomerFormDTO GetOne(int id);
+        public IEnumerable<CustomerFormDTO> GetMany();
         public bool Update(int id, CustomerFormDTO customer);
         public bool Delete(int id);
-
+        public CustomerLoginDTO? Login(CustomerLoginDTO customer);
     }
 }

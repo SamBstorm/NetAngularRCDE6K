@@ -10,6 +10,19 @@ using TF_NET_Angular_RCD_Bibliotheque.DAL.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(
+    options =>
+    {
+        options.AddPolicy(name : "MyCORSPolicy",
+            policy =>
+            {
+                policy.AllowAnyOrigin();
+                policy.AllowAnyHeader();
+            }
+            );
+
+    });
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -61,6 +74,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("MyCORSPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();

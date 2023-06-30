@@ -8,7 +8,7 @@ using TF_NET_Angular_RCD_Bibliotheque.DAL.DataContext;
 
 #nullable disable
 
-namespace TF_NET_Angular_RCD_Bibliotheque.API.Migrations
+namespace TF_NET_Angular_RCD_Bibliotheque.DAL.Migrations
 {
     [DbContext(typeof(LibraryContext))]
     partial class LibraryContextModelSnapshot : ModelSnapshot
@@ -43,9 +43,9 @@ namespace TF_NET_Angular_RCD_Bibliotheque.API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Pseudo")
                         .IsRequired()

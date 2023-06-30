@@ -48,7 +48,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.BLL.Services
             return n;
         }
 
-        public List<Notice> GetMany()
+        public IEnumerable<Notice> GetMany()
         {
             return _noticeRepository.GetMany();
         }

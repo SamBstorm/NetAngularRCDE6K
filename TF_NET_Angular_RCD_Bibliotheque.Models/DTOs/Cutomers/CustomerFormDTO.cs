@@ -9,6 +9,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.Models.DTOs.Cutomers
 {
     public class CustomerFormDTO
     {
+        public int Id { get; set; }
         [Required]
         [MinLength(1)]
         [MaxLength(50)]

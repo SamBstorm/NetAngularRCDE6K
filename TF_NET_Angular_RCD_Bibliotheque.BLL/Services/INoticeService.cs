@@ -12,7 +12,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.BLL.Services
     {
         public Notice Add(NoticeFormDTO dto);
         public Notice GetOne(int id);
-        public List<Notice> GetMany();
+        public IEnumerable<Notice> GetMany();
         public bool Update(int id, NoticeFormDTO dto);
         public bool Delete(int id);
     }

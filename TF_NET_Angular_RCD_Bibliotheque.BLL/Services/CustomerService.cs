@@ -21,29 +21,29 @@ namespace TF_NET_Angular_RCD_Bibliotheque.BLL.Services
             this._customerRepository = customerRepository;
         }
 
-        public Customer Add(CustomerFormDTO customer)
+        public CustomerFormDTO Add(CustomerFormDTO customer)
         {
             Customer? existingCustomer = _customerRepository.GetOne(c => c.Pseudo == customer.Pseudo);
             if(existingCustomer is not null)
             {
                 throw new AlreadyExistException("Pseudo deja utilisé");
             }
-            return _customerRepository.Add(customer.ToDAL());
+            return _customerRepository.Add(customer.ToDAL()).ToDTO();
         }
 
-        public Customer GetOne(int id)
+        public CustomerFormDTO GetOne(int id)
         {
             Customer? customer = _customerRepository.GetOne(c => c.Id == id);
             if(customer is null)
             {
                 throw new KeyNotFoundException("Il n'existe pas d'utilisateur avec cet id");
             }
-            return customer;
+            return customer.ToDTO();
         }
 
-        public List<Customer> GetMany()
+        public IEnumerable<CustomerFormDTO> GetMany()
         {
-            return _customerRepository.GetMany();
+            return _customerRepository.GetMany().Select(c => c.ToDTO());
         }
 
         public bool Update(int id, CustomerFormDTO customer)
@@ -53,11 +53,12 @@ namespace TF_NET_Angular_RCD_Bibliotheque.BLL.Services
             {
                 throw new KeyNotFoundException("Il n'existe pas d'utilisateur avec cet id");
             }
-            existingCustomer.Firstname = customer.Firstname;
-            existingCustomer.Lastname = customer.Lastname;
-            existingCustomer.Birthdate = customer.Birthdate;
-            existingCustomer.Pseudo = customer.Pseudo;
-            existingCustomer.Password = customer.Password;
+            Customer updated = customer.ToDAL();
+            existingCustomer.Firstname = updated.Firstname;
+            existingCustomer.Lastname = updated.Lastname;
+            existingCustomer.Birthdate = updated.Birthdate;
+            existingCustomer.Pseudo = updated.Pseudo;
+            existingCustomer.Password = updated.Password;
 
             return _customerRepository.Update(existingCustomer);
         }
@@ -70,6 +71,11 @@ namespace TF_NET_Angular_RCD_Bibliotheque.BLL.Services
                 throw new KeyNotFoundException("Il n'existe pas d'utilisateur avec cet id");
             }
             return _customerRepository.Delete(existingCustomer);
+        }
+
+        public CustomerLoginDTO? Login(CustomerLoginDTO customer)
+        {
+            return _customerRepository.Login(customer.Pseudo, customer.Password.sha256_hash()).ToLoginDTO();
         }
     }
 }

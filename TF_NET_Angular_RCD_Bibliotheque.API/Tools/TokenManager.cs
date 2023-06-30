@@ -2,7 +2,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using TF_NET_Angular_RCD_Bibliotheque.Models.Entities;
+using TF_NET_Angular_RCD_Bibliotheque.Models.DTOs.Cutomers;
 
 namespace TF_NET_Angular_RCD_Bibliotheque.API.Tools
 {
@@ -13,7 +13,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.API.Tools
         {
                 _config = config;
         }
-        public string GenerateToken(Customer customer)
+        public string GenerateToken(CustomerLoginDTO customer)
         {
             string secretKey = _config.GetSection("TokenInfo").GetSection("secretKey").Value;
 

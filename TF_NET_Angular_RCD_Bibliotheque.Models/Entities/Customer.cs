@@ -17,7 +17,7 @@ namespace TF_NET_Angular_RCD_Bibliotheque.Models.Entities
         public string Lastname { get; set; }
         public DateTime Birthdate { get; set; }
         public string Pseudo { get; set; }
-        public string Password { get; set; }
+        public byte[] Password { get; set; }
         public List<Notice> Notices { get; set; }
     }
 }
